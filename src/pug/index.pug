@@ -1,20 +1,18 @@
 doctype html
-html(class="no-js" lang="")
+html(lang="fr")
     head
         meta(charset="utf-8")
         meta(http-equiv="x-ua-compatible" content="ie=edge")
-        title Page Title
-        meta(name="description" content="")
+        title Alexandre Broudin • Product Designer in Paris
+        meta(name="description" content="Previously @Wisembly / @Solid , @Tigerlily, Pix-l communication (aquired by Neuros), I have a ten-year working experience in front end development and UI / UX design.")
         meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="theme-color" content="#e7e7e7")
 
         link(rel="apple-touch-icon" href="apple-touch-icon.png")
         link(rel="stylesheet" href="style.css")
-        // script(src="js/vendor/modernizr-2.8.3.min.js")
+        link(rel="manifest" href="manifest.json")
+
     body
-        //
-            [if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-            <![endif]
         .ContentWrapper(itemscope,itemtype="http://schema.org/Person")
           h1.Name(itemprop="name") #[span(itemprop="givenName") Alexandre] #[strong(itemprop="familyName") Broudin ]
           h2.Job #[span(itemprop="jobTitle") Digital Product Designer], #[span(itemprop="address", itemscope itemtype="http://schema.org/PostalAddress") #[span(itemprop="addressLocality") Paris]]

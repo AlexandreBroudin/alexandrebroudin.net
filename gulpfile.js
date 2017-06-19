@@ -5,7 +5,7 @@ var sass          = require('gulp-sass');
 var base64        = require('gulp-base64');
 var prefix        = require('gulp-autoprefixer');
 var rename        = require('gulp-rename');
-var img           = require('gulp-image-resize');
+var resize        = require('gulp-image-resize');
 var deploy        = require("gulp-gh-pages");
 
 var onError = function(err) {
@@ -56,16 +56,21 @@ gulp.task('img', function() {
     .pipe(gulp.dest('dist/img/'));
 });
 
+gulp.task('manifest', function() {
+  return gulp.src('manifest.json')
+    .pipe(gulp.dest('dist/'))
+});
 
 var options = {
     remoteUrl: "https://github.com/AlexandreBroudin/alexandrebroudin.net.git",
     branch: "gh-pages"};
+
 gulp.task('deploy', function () {
     gulp.src("dist/**/*.*")
         .pipe(deploy(options));
 });
 
-gulp.task('build', ['pug', 'sass']);
+gulp.task('build', ['pug', 'sass', 'img', 'manifest']);
 
 gulp.task('default', ['pug', 'sass', 'browser-sync'], function () {
   gulp.watch('**/*.scss', ['sass']);
