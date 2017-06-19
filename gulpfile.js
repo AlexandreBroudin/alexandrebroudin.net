@@ -6,6 +6,7 @@ var base64        = require('gulp-base64');
 var prefix        = require('gulp-autoprefixer');
 var rename        = require('gulp-rename');
 var img           = require('gulp-image-resize');
+var deploy        = require("gulp-gh-pages");
 
 var onError = function(err) {
   console.log(err);
@@ -55,7 +56,16 @@ gulp.task('img', function() {
     .pipe(gulp.dest('dist/img/'));
 });
 
-gulp.task('build', ['pug', 'sass', 'img']);
+
+var options = {
+    remoteUrl: "https://github.com/AlexandreBroudin/alexandrebroudin.net.git",
+    branch: "gh-pages"};
+gulp.task('deploy', function () {
+    gulp.src("dist/**/*.*")
+        .pipe(deploy(options));
+});
+
+gulp.task('build', ['pug', 'sass']);
 
 gulp.task('default', ['pug', 'sass', 'browser-sync'], function () {
   gulp.watch('**/*.scss', ['sass']);
