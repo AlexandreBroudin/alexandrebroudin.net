@@ -9,7 +9,9 @@ html(lang="fr")
         meta(name="theme-color" content="#e7e7e7")
 
         link(rel="apple-touch-icon" href="apple-touch-icon.png")
-        link(rel="stylesheet" href="style.css")
+        style
+          include ../../dist/style.css
+        link(rel="stylesheet" href="non-critical.css")
         link(rel="manifest" href="manifest.json")
 
     body

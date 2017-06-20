@@ -2,6 +2,7 @@ var browserSync   = require('browser-sync').create();
 var gulp          = require('gulp');
 var pug           = require('gulp-pug');
 var sass          = require('gulp-sass');
+var cssnano       = require('gulp-cssnano');
 var base64        = require('gulp-base64');
 var prefix        = require('gulp-autoprefixer');
 var rename        = require('gulp-rename');
@@ -46,18 +47,38 @@ gulp.task('sass', function () {
       browsers: ['Safari 7', 'last 2 versions']
     }))
     .pipe(rename('style.css'))
+    .pipe(cssnano())
+    .pipe(gulp.dest('dist'))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('non-critical', function () {
+  return gulp.src('./src/scss/non-critical.scss')
+    .pipe(sass.sync({
+      outputStyle: 'expanded'
+    }).on('error', sass.logError))
+    .pipe(prefix({
+      browsers: ['Safari 7', 'last 2 versions']
+    }))
+    .pipe(rename('non-critical.css'))
+    .pipe(cssnano())
     .pipe(gulp.dest('dist'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('img', function() {
-  return gulp.src('src/img/*.png')
+  return gulp.src(['src/img/*.png', '!src/img/*.ico'])
     .pipe(resize({width:100}))
     .pipe(gulp.dest('dist/img/'));
 });
 
 gulp.task('manifest', function() {
   return gulp.src('manifest.json')
+    .pipe(gulp.dest('dist/'))
+});
+
+gulp.task('favicon', function() {
+  return gulp.src('src/img/favicon.ico')
     .pipe(gulp.dest('dist/'))
 });
 
@@ -70,10 +91,11 @@ gulp.task('deploy', function () {
         .pipe(deploy(options));
 });
 
-gulp.task('build', ['pug', 'sass', 'img', 'manifest']);
+gulp.task('build', ['pug', 'sass', 'non-critical', 'img', 'manifest', 'favicon']);
 
 gulp.task('default', ['pug', 'sass', 'browser-sync'], function () {
   gulp.watch('**/*.scss', ['sass']);
+  gulp.watch('**/*.scss', ['non-critical']);
   gulp.watch('**/*.png', ['img']);
   gulp.watch('**/*.pug', ['pug']);
 });
