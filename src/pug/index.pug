@@ -11,7 +11,6 @@ html(lang="fr")
         link(rel="apple-touch-icon" href="apple-touch-icon.png")
         style
           include ../../dist/style.css
-        link(rel="stylesheet" href="non-critical.css")
         link(rel="manifest" href="manifest.json")
 
     body
@@ -24,6 +23,14 @@ html(lang="fr")
           var email = document.getElementById('alex-email');
           email.href = ['mailto', ':', 'alexandre', '@', 'broudin', '.', 'net'].join('');
 
+
+        script(defer).
+          var critical = document.createElement('link');
+          critical.rel = 'stylesheet';
+          critical.href = 'non-critical.css';
+          critical.type = 'text/css';
+          var godefer = document.getElementsByTagName('link')[0];
+          godefer.parentNode.insertBefore(critical, godefer);
 
         noscript
           style.
