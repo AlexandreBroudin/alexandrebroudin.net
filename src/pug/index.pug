@@ -1,39 +1,39 @@
 doctype html
 html(lang="fr")
-    head
-        meta(charset="utf-8")
-        meta(http-equiv="x-ua-compatible" content="ie=edge")
-        title Alexandre Broudin • Product Designer in Paris
-        meta(name="description" content="Previously @Wisembly / @Solid , @Tigerlily, Pix-l communication (acquired by Neuros), I have a ten-year working experience in front end development and UI / UX design.")
-        meta(name="viewport" content="width=device-width, initial-scale=1")
-        meta(name="theme-color" content="#e7e7e7")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    title Alexandre Broudin • Product Designer in Paris
+    meta(name="description" content="Previously @Wisembly / @Solid , @Tigerlily, Pix-l communication (acquired by Neuros), I have a ten-year working experience in front end development and UI / UX design.")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="theme-color" content="#e7e7e7")
 
-        link(rel="apple-touch-icon" href="apple-touch-icon.png")
-        style
-          include ../../dist/style.css
-        link(rel="manifest" href="manifest.json")
+    link(rel="apple-touch-icon" href="apple-touch-icon.png")
+    style
+      include ../../dist/style.css
+    link(rel="manifest" href="manifest.json")
 
-    body
-        .ContentWrapper(itemscope,itemtype="http://schema.org/Person")
-          h1.Name(itemprop="name") #[span(itemprop="givenName") Alexandre] #[strong(itemprop="familyName") Broudin ]
-          h2.Job #[span(itemprop="jobTitle") Digital Product Designer], #[span(itemprop="address", itemscope itemtype="http://schema.org/PostalAddress") #[span(itemprop="addressLocality") Paris]]
-          footer.Footer #[a.Link.Footer-link(href="https://twitter.com/abroudin", role="link", itemprop="url") Twitter] #[a.Link.Footer-link(href="https://dribbble.com/abroudin", role="link", itemprop="sameAs") Dribbble] #[a.Link.Footer-link.Email#alex-email(href="http://google.com", rel="nofollow", role="link") ten.niduorb@erdnaxela] #[noscript contact@en-marche.fr]
+  body
+    .ContentWrapper(itemscope,itemtype="http://schema.org/Person")
+      h1.Name(itemprop="name") #[span(itemprop="givenName") Alexandre] #[strong(itemprop="familyName") Broudin ]
+      h2.Job #[span(itemprop="jobTitle") Digital Product Designer], #[span(itemprop="address", itemscope itemtype="http://schema.org/PostalAddress") #[span(itemprop="addressLocality") Paris]]
+      footer.Footer #[a.Link.Footer-link(href="https://twitter.com/abroudin", role="link", itemprop="url") Twitter] #[a.Link.Footer-link(href="https://dribbble.com/abroudin", role="link", itemprop="sameAs") Dribbble] #[a.Link.Footer-link(href="https://keybase.io/knuc", role="link", itemprop="sameAs") Keybase] #[a.Link.Footer-link.Email#alex-email(href="http://google.com", rel="nofollow", role="link") ten.niduorb@erdnaxela] #[noscript contact@en-marche.fr]
 
-        script.
-          var email = document.getElementById('alex-email');
-          email.href = ['mailto', ':', 'alexandre', '@', 'broudin', '.', 'net'].join('');
+    script.
+      var email = document.getElementById('alex-email');
+      email.href = ['mailto', ':', 'alexandre', '@', 'broudin', '.', 'net'].join('');
 
 
-        script(defer).
-          var critical = document.createElement('link');
-          critical.rel = 'stylesheet';
-          critical.href = 'non-critical.css';
-          critical.type = 'text/css';
-          var godefer = document.getElementsByTagName('link')[0];
-          godefer.parentNode.insertBefore(critical, godefer);
+    script(defer).
+      var critical = document.createElement('link');
+      critical.rel = 'stylesheet';
+      critical.href = 'non-critical.css';
+      critical.type = 'text/css';
+      var godefer = document.getElementsByTagName('link')[0];
+      godefer.parentNode.insertBefore(critical, godefer);
 
-        noscript
-          style.
-            .Email {
-              display: none;
-            }
+    noscript
+      style.
+        .Email {
+          display: none;
+        }
