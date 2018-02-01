@@ -7,7 +7,8 @@ var base64        = require('gulp-base64');
 var prefix        = require('gulp-autoprefixer');
 var rename        = require('gulp-rename');
 var resize        = require('gulp-image-resize');
-var deploy        = require("gulp-gh-pages");
+//var deploy        = require("gulp-gh-pages");
+var deploy        = require("gulp-gh-pages-cname");
 
 var onError = function(err) {
   console.log(err);
