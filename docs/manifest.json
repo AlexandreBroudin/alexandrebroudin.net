@@ -1,0 +1,17 @@
+{
+  "name": "Alexandre Broudin",
+  "short_name": "Alex",
+  "description": "Digital Product Designer UI/ UX Alexandre Broudin's personnal website",
+  "lang": "fr",
+  "start_url": "http://alexandre.broudin.net/",
+  "display": "minimal-ui",
+  "theme_color": "#e7e7e7",
+  "background_color": "#e7e7e7",
+  "icons": [
+    {
+      "src": "img/icon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

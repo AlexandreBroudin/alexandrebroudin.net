@@ -80,7 +80,7 @@ gulp.task('img', function() {
 });
 
 gulp.task('misc', function() {
-  return gulp.src(['src/img/favicon.ico', 'manifest.json', 'src/CNAME'])
+  return gulp.src(['src/img/favicon.ico', 'manifest.json', 'keybase.txt', 'src/CNAME'])
     .pipe(gulp.dest('docs/'))
 });
 

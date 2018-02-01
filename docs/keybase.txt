@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/knuc
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://alexandre.broudin.net
+  * I am knuc (https://keybase.io/knuc) on keybase.
+  * I have a public key ASAwEdKobDWSZQWNCseZ4_ySwPdoI6V1fVjxrDGKGbwZGQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01207cc4c08c379b77bdb7e65961602786f523619c9a019707fddaf3825c4e4f421f0a",
+      "host": "keybase.io",
+      "kid": "01203011d2a86c359265058d0ac799e3fc92c0f76823a5757d58f1ac318a19bc19190a",
+      "uid": "f443cad1aecf9981847b0e2697722619",
+      "username": "knuc"
+    },
+    "merkle_root": {
+      "ctime": 1517516367,
+      "hash": "32272bc0157b22d99fadc79f58765742ac80ae7e3996aec70448dd9c94d69ad86e86d8934ebbfd6649cc643c3f08c924f9fd9c8a9364a7c2c29349596114e921",
+      "hash_meta": "2b19f3dfa3c2317427c7a9bbf8e77cbc6ac588fc7f5e72ce6604226c377c461c",
+      "seqno": 2017622
+    },
+    "service": {
+      "hostname": "alexandre.broudin.net",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.39"
+  },
+  "ctime": 1517516372,
+  "expire_in": 504576000,
+  "prev": "2de9b12d73699189bf251d9d28376485f9256ba61aa3ac618a241fa3546fa8e4",
+  "seqno": 40,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgMBHSqGw1kmUFjQrHmeP8ksD3aCOldX1Y8awxihm8GRkKp3BheWxvYWTFA0l7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwN2NjNGMwOGMzNzliNzdiZGI3ZTY1OTYxNjAyNzg2ZjUyMzYxOWM5YTAxOTcwN2ZkZGFmMzgyNWM0ZTRmNDIxZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzAxMWQyYTg2YzM1OTI2NTA1OGQwYWM3OTllM2ZjOTJjMGY3NjgyM2E1NzU3ZDU4ZjFhYzMxOGExOWJjMTkxOTBhIiwidWlkIjoiZjQ0M2NhZDFhZWNmOTk4MTg0N2IwZTI2OTc3MjI2MTkiLCJ1c2VybmFtZSI6ImtudWMifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1MTc1MTYzNjcsImhhc2giOiIzMjI3MmJjMDE1N2IyMmQ5OWZhZGM3OWY1ODc2NTc0MmFjODBhZTdlMzk5NmFlYzcwNDQ4ZGQ5Yzk0ZDY5YWQ4NmU4NmQ4OTM0ZWJiZmQ2NjQ5Y2M2NDNjM2YwOGM5MjRmOWZkOWM4YTkzNjRhN2MyYzI5MzQ5NTk2MTE0ZTkyMSIsImhhc2hfbWV0YSI6IjJiMTlmM2RmYTNjMjMxNzQyN2M3YTliYmY4ZTc3Y2JjNmFjNTg4ZmM3ZjVlNzJjZTY2MDQyMjZjMzc3YzQ2MWMiLCJzZXFubyI6MjAxNzYyMn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJhbGV4YW5kcmUuYnJvdWRpbi5uZXQiLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjM5In0sImN0aW1lIjoxNTE3NTE2MzcyLCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6IjJkZTliMTJkNzM2OTkxODliZjI1MWQ5ZDI4Mzc2NDg1ZjkyNTZiYTYxYWEzYWM2MThhMjQxZmEzNTQ2ZmE4ZTQiLCJzZXFubyI6NDAsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RA1lnYL2LE8ILD8ACaA4z++SPT2bmtDyZKc6AyDul0uoX16s8wYmHbsBDsfugtyJIeHrQLTH1jMBtWjxBpN/uMDahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHP0mY1hQu3zHY6P0K4VVoIn/4MJ2Q1XMHsg8OfiqVeYo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/knuc
+
+==================================================================
