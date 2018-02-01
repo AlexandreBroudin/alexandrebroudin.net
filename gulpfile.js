@@ -18,11 +18,11 @@ gulp.task('browser-sync', ['sass'], function() {
   browserSync.init({
     ui: false,
     ghostMode: false,
-    server: "dist",
+    server: "docs",
     reloadDelay: 500
   });
 
-  gulp.watch("dist/**/*.html").on("change", browserSync.reload)
+  gulp.watch("docs/**/*.html").on("change", browserSync.reload)
 });
 
 gulp.task('pug', function () {
@@ -31,13 +31,13 @@ gulp.task('pug', function () {
       pretty: "  "
     }))
     .on('error', onError)
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('docs/'));
 });
 
 /*
 gulp.task('js', function () {
   return gulp.src('src/js/*.js')
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('docs/'));
 });
 */
 
@@ -55,7 +55,7 @@ gulp.task('sass', function () {
     }))
     .pipe(rename('style.css'))
     .pipe(cssnano())
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('docs'))
     .pipe(browserSync.stream());
 });
 
@@ -69,29 +69,29 @@ gulp.task('non-critical', function () {
     }))
     .pipe(rename('non-critical.css'))
     .pipe(cssnano())
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('docs'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('img', function() {
   return gulp.src(['src/img/*.png', '!src/img/*.ico'])
     .pipe(resize({width:100}))
-    .pipe(gulp.dest('dist/img/'));
+    .pipe(gulp.dest('docs/img/'));
 });
 
 gulp.task('misc', function() {
   return gulp.src(['src/img/favicon.ico', 'manifest.json', 'src/CNAME'])
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('docs/'))
 });
 
 gulp.task('deploy', () => {
-  return gulp.src(['./dist/**/*', './dist/CNAME'])
+  return gulp.src(['./docs/**/*', './docs/CNAME'])
     .pipe(ghpage());
 });
 
-gulp.task('build', ['pug', /*'js',*/ 'sass', 'non-critical', 'img', 'misc']);
+gulp.task('build', ['sass', 'pug', 'non-critical', 'img', 'misc']);
 
-gulp.task('default', ['pug', /*'js',*/  'sass', 'non-critical', 'img',  'browser-sync'], function () {
+gulp.task('default', ['sass', 'pug', 'non-critical', 'img',  'browser-sync'], function () {
   //gulp.watch('**/*.js', ['js']);
   gulp.watch('**/*.scss', ['sass']);
   gulp.watch('**/*.scss', ['non-critical']);
